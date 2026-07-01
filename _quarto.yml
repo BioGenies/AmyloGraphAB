@@ -20,6 +20,8 @@ website:
       - interactions.qmd
       - amyloids.qmd
       - antibodies.qmd
+    right:
+      - curation.qmd
 
   page-footer:
     background: light

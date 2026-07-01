@@ -1,0 +1,239 @@
+---
+title: "Data curation"
+---
+
+The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.
+
+We establish controlled-vocabulary to describe the interaction, considering:
+
+* **No effect** when the antibody does not affect the amyloid aggregation.
+
+* **Slower aggregation (partial inhibition)** when the antibody kinetically slows down the deposition process.
+
+* **Diminished amyloid quantity at the final point (partial inhibition)** when the effect of the antibody is reflexed as a diminished amyloid quantity.
+
+* **No aggregation (complete inhibition)** when the amyloid quantity remaining lies below the quantitative threshold of the method.
+
+
+
+
+## Amyloid proteins
+
+Amyloid proteins were obtained according to the latest update of the [International Society of Amyloidosis (ISA) Nomenclature Committee](https://doi.org/10.1080/13506129.2024.2405948), from the amyloid fibrol ptoreins and precursors in human (Aβ, AαSyn, ATau, APrP, ATTR, etc), as well as the Pathological intracellular protein aggregates which display at least some typical amyloid fibril properties (TARDBP, TIA1, SOD1, C9orf72, etc). These were supplemented with bacterial and yeast amyloids (CsgA, Sup35, etc). Finally, mammalian homologues of amyloid proteins (mice Aβ, APrP, ATau) were accepted as amyloid proteins if proof of amyloid aggregation was shown on the respective publication. The basic amyloid proteins initially considered for the AmyloGraph Antibody Database are reported in the following tables.
+
+
+### Human amyloid proteins
+
+| Amyloid Species | Canonical Protein Entry | UniProt Link | DisGeNET Link |
+| :--- | :--- | :--- | :--- |
+| A𝛽-42 | P05067 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P05067/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=351&source=ALL&tab=GDA) |
+| A𝛽-40 | P05067 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P05067/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=351&source=ALL&tab=GDA) |
+| pE3-Aβ | P05067 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P05067/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=351&source=ALL&tab=GDA) |
+| ɑ-Synuclein | P37840 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P37840/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=6622&source=ALL&tab=GDA) |
+| Tau | P10636 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P10636/entry) |
+| Immunoglobulin light chain | *Multi-entry* | *Variable dependent on clonal sequence* | *Variable dependent on clonal sequence* |
+| Immunoglobulin heavy chain | *Multi-entry* | *Variable dependent on clonal sequence* | *Variable dependent on clonal sequence* |
+| (Apo) Serum amyloid A | P0DJI8 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P0DJI8/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=6288&source=ALL&tab=GDA) |
+| Transthyretin | P02766 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02766/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=7276&source=ALL&tab=GDA) |
+| 𝛽2-microglobulin | P61769 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P61769/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=567&source=ALL&tab=GDA) |
+| Apolipoprotein A-I | P02647 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02647/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=335&source=ALL&tab=GDA) |
+| Apolipoprotein A-II | P02652 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02652/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=336&source=ALL&tab=GDA) |
+| Apolipoprotein A-IV | P06727 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P06727/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=337&source=ALL&tab=GDA) |
+| Apolipoprotein C-II | P02655 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02655/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=344&source=ALL&tab=GDA) |
+| Apolipoprotein C-III | P02656 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02656/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=345&source=ALL&tab=GDA) |
+| Gelsolin | P06396 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P06396/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=2934&source=ALL&tab=GDA) |
+| Lysozyme | P61626 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P61626/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=4069&source=ALL&tab=GDA) |
+| Leukocyte chemotactic factor 2 | O14960 | [UniProt Entry](https://www.uniprot.org/uniprotkb/O14960/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=3950&source=ALL&tab=GDA) |
+| Fibrinogen ɑ | P02671 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02671/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=2243&source=ALL&tab=GDA) |
+| Cystatin C | P01034 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P01034/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=1471&source=ALL&tab=GDA) |
+| ABriPP | Q9Y287 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q9Y287/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=9445&source=ALL&tab=GDA) |
+| ADanPP | Q9Y287 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q9Y287/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=9445&source=ALL&tab=GDA) |
+| Prion protein | P04156 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P04156/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=5621&source=ALL&tab=GDA) |
+| Transmembrane protein 106B | Q9NUM4 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q9NUM4/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=54664&source=ALL&tab=GDA) |
+| (Pro) Calcitonin | P01258 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P01258/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=796&source=ALL&tab=GDA) |
+| Islet amyloid polypeptide | P10997 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P10997/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=3375&source=ALL&tab=GDA) |
+| Atrial natriuretic peptide | P01160 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P01160/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=4878&source=ALL&tab=GDA) |
+| Prolactin | P01236 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P01236/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=5617&source=ALL&tab=GDA) |
+| (Pro) Somatostatin | P61278 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P61278/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=6750&source=ALL&tab=GDA) |
+| Glucagon | P01275 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P01275/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=2641&source=ALL&tab=GDA) |
+| Parathyroid hormone | P01270 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P01270/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=5741&source=ALL&tab=GDA) |
+| Lung surfactant protein C | P11686 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P11686/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=6440&source=ALL&tab=GDA) |
+| Corneodesmosin | Q15517 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q15517/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=1041&source=ALL&tab=GDA) |
+| Lactadherin (Medin) | Q08431 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q08431/entry) |  [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=4240&source=ALL&tab=GDA) |
+| Kerato-epithelin (TGFBI) | Q15582 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q15582/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=7045&source=ALL&tab=GDA) |
+| Lactoferrin | P02788 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02788/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=4057&source=ALL&tab=GDA) |
+| Odontogenic ameloblast-associated protein | A1E959 | [UniProt Entry](https://www.uniprot.org/uniprotkb/A1E959/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=54959&source=ALL&tab=GDA) |
+| Semenogelin-1 | P04279 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P04279/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=6406&source=ALL&tab=GDA) |
+| Cathepsin K | P43235 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P43235/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=1513&source=ALL&tab=GDA) |
+| EGF-containing fibulin-like extracellular matrix protein 1 | Q12805 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q12805/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=2202&source=ALL&tab=GDA) |
+| Cytokeratin | P02533 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P02533/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=3861&source=ALL&tab=GDA) |
+
+
+#### Human proteins forming inclusions with amloid properties
+
+| Amyloid-like Species | Canonical Protein Entry | UniProt Link | DisGeNET Link |
+| :--- | :--- | :--- | :--- |
+| p53 | P04637 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P04637/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=7157&source=ALL&tab=GDA) |
+| Desmin | P17661 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P17661/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=1674&source=ALL&tab=GDA) |
+| Galectin 7 | P47929 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P47929/entry) |  [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=3963&source=ALL&tab=GDA) |
+| Superoxide dismutase [SOD1] | P00441 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P00441/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=6647&source=ALL&tab=GDA) |
+| TAR DNA-binding protein 43 [TDP-43] | Q13148 | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q13148/entry) | [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=23435&source=ALL&tab=GDA) |
+| Huntingtin | P42858 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P42858/entry) |  [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=3064&source=ALL&tab=GDA) |
+| Androgen receptor | P10275 | [UniProt Entry](https://www.uniprot.org/uniprotkb/P10275/entry) |  [DisGeNET Entry](https://www.disgenet.com/search?view=GENES&idents=367&source=ALL&tab=GDA) |
+
+
+
+#### Microbial Amyloid Proteins
+
+| Amyloid Species | Specie - Genus | UniProt Link |  
+| :--- | :--- | :--- | 
+| CsgA | *E. coli / Aeromonas* | [UniProt Entry](https://www.uniprot.org/uniprotkb/P0AEA2/entry) |
+| CsgB | *E. coli / Aeromonas* | [UniProt Entry](https://www.uniprot.org/uniprotkb/P0AEAB/entry) |
+| FapB | *Pseudomonas* | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q88LZ5/entry) |
+| FapC | *Pseudomonas* | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q88LZ4/entry) |
+| SSB | *Campylobacter hominis* | [UniProt Entry](https://www.uniprot.org/uniprotkb/A0A1Q3LNP0/entry) |
+| Transcription termination factor Rho | *Clostridium botulinum* | [UniProt Entry](https://www.uniprot.org/uniprotkb/A0A0M3VCI1/entry) |
+| Sup35 | *Saccharomyces cerevisiae* | [UniProt Entry](https://www.uniprot.org/uniprotkb/P05453/entry) |
+| Ure2 | *Saccharomyces cerevisiae* | [UniProt Entry](https://www.uniprot.org/uniprotkb/P23202/entry) |
+| HET-s | *Podospora anserina* | [UniProt Entry](https://www.uniprot.org/uniprotkb/Q03689/entry) |
+
+Note: different microbial species and strains have shown to form amyloid aggregates. Therefore, beyond this list, specific proteins of these families are accepted.
+
+## Antibodies and antibody-based designs
+
+The database considers the effect of a single monoclonal antibody on the amyloid aggregation of an amyloid protein. Different species IgGs, orthodox, IgG inspired, and heterodox, novel multimeric, antibody formats were accepted and named according to the original publication, or according to [the following classification](https://doi.org/10.1016/j.tibtech.2010.03.007).
+
+Antibody-conjugated nanoparticles and nanoparticles engineered with an antibody derivative, on the other hand, were consdidered separately. Following the [World Health Organization (WHO) International Nonproprietary Names (INN) naming convention](https://www.who.int/teams/health-product-and-policy-standards/inn/guidance-on-inn), immunoglobulin fusions with peptides were as well considered an antibody if both domains have immunoglobulin derived variable domains. Conjugates with small molecules or radioisotopes as well. Larger nanoparticles than 50 nm, approximately 5 times a typical IgG, were discarded.
+
+### Therapeutic monoclonal antibodies evaluated in clinical trials
+
+Tha AmyloGraph Antibody Database compiles data for most monoclonal antibodies evaluated in clinical trials. These species are catalogues in the table below.
+
+| INN or development name | IMGT DB | PubChem | Thera-SAbDab | YABS DB | Other IDs | Parental/Heterologous Antibody ID |
+| :--- | :---: | :---: | :---: | :---: | :--- | :---: |
+| **Aducanumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=479) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Aducanumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=aducanumab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/36) | BART, BIIB-037, BIIB037, aducanumab-avwa, Aduhelm | None |
+| **Gantenerumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=223) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Gantenerumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=gantenerumab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/1729) | R1450, RG-1450, RG1450, Ro-4909832, RO4909832 | None |
+| **Donanemab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=892) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Donanemab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=donanemab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/1729) | LY3002813, donanemab-azbt | mE8 |
+| **Crenezumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=378) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Crenezumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=crenezumab&format=Whole+mAb) | *N/A* | MABT5102A, RG7412, MABT-5102A, RG-7412 | mC2 |
+| **Solanezumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=298) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Solanezumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=solanezumab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/2220) | LY2062430 | m266 |
+| **Lecanemab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1016) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Lecanemab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=lecanemab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/28) | BAN-2401, BAN2401, lecanemab-irmb, Leqembi, Leqembi™ | mAb158 |
+| **Bapineuzumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=252) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Bapineuzumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=bapineuzumab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/1754) | AAB-001 | 3D6 |
+| **Cliramitug** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1757) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/485665740) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=cliramitug&format=Whole+mAb) | *N/A* | ALXN-2220, ALXN2220 | NI006 |
+| **Anselamimab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1178) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/494430855) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=anselamimab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/479) | CAEL-101, CAEL101 | 11-1F4 |
+| **Birtamimab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=619) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/336908630) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=birtamimab&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/1047) | NEOD001, NEOD-001, ELT1-01 | 2A4 |
+| **Etalanetug** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1693) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/520376953) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=etalanetug&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/1047) | E2814 | 7G6 |
+| **SAR228810** | *N/A* | *N/A* | *N/A* | *N/A* | 13C3, SAR255952 | *N/A* |
+| **Prasinezumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=769) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/404719618) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=prasinezumab&format=Whole+mAb) | *N/A* | PRX002, RG-7935, RG7935 | 9E4 |
+| **Cinpanemab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=930) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/336908608) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=cinpanemab&format=Whole+mAb) | *N/A* | BIIB054 | 12F4 |
+| **Amlenetug** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1539) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/440234775) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=amlenetug&format=Whole+mAb) | [YABS DB](https://db.antibodysociety.org/db0/945) | Lu AF82422, GM37 | GM37 |
+| **Exidavnemab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1190) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/472420523) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=exidavnemab&format=Whole+mAb) | *N/A* | BAN0805 | Ab47 |
+| **Indenebart** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=1566) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/520377790) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=indenebart&format=Whole+mAb) | *N/A* | MEDI1341, TAK-341 | None |
+| **Dezamizumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=652) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Dezamizumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=dezamizumab&format=Whole+mAb) | *N/A* | GSK 2398852, GSK2398852 | *N/A* |
+| **Ponezumab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=369) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/compound/Ponezumab) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=ponezumab&format=Whole+mAb) | *N/A* | PF-04360365 | 2H6 |
+| **Gosuranemab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=851) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/374363955) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=gosuranemab&format=Whole+mAb) | *N/A* | BIIB092 | IPN002 |
+
+
+# The AmyloGraph Antidoby Database Curation Pipeline
+
+
+
+## Data acquisition
+
+We designed keyword-based queries to obtain peer-reviewed publications reporting the effect of antibody and antibodies or nanobody and nanobodies, on amyloid aggregation.
+
+```
+
+- "amyloid"[Title/Abstract] AND "antibod*"[Title/Abstract]
+
+- "amyloid"[Title/Abstract] AND "nanobod*"[Title/Abstract]
+```
+
+This query was executed on October 24, 2024. After removing duplicates, a total of 4023 unique publications were identified. An additional 58 publications were identified through manual screening of reference lists and included in the final analysis.
+
+
+### Inclusion-Exclusion Criteria & Curation Tags
+
+Manuscripts that failed to **demostrate experimentally the effect on amyloid aggregation on antibody-amyloid protein interaction** were excluded during this initial curation phase. We used a multi-tagging system that enabled documenting multiple reasons for a single article's rejection. The definition of the exclusion criteria are as follow:
+
+---
+
+##### 1. Missing or Insufficient Experimental Information
+
+* **Not Enough Experimental Data:** The publication does not directly capture or quantify the antibody's specific effect on amyloid formation. (For example when an antibody was used only for detection).
+* **(Pre)Clinical Trials (No Interaction/Amyloid Data):** Clinical trial reports that lack amyloid aggregation data.
+* **No Interactions Described:** The text provides insufficient data describing the functional effect of the antibody on the target amyloid system.
+* **The Interactor is Not an Amyloid Protein:** The target protein falls outside our designated amyloid-forming criteria. 
+* **The Interactor is Not an Antibody:** The targeting molecule does not qualify as an antibody, a valid antibody derivative. (For example publications describing Amyloid light-chain amyloidosis, where immunoglobulin chains are not participating as an antibody but an amyloid, and no antibody directed to them exists)
+* **Unknown Antibody Type:** The molecule features a highly unconventional architecture or excessive modifications, preventing it from being accurately classified under the established antibody definitions.
+
+---
+
+##### 2. Publication Formats & Methodology Filters
+
+* **Review article:** The paper summarizes existing literature without presenting novel, primary experimental data. Despite PubMed tags many reviews automatically, we manually audit the remaining ~50% to ensure no secondary sources enter the pipeline. This category also included editorial, perspectives, viewpoints and other non-article publications, statements and similar that do not provide new information.
+* **Pre-print:** The manuscript has not yet undergone formal peer review. To maintain maximum data integrity, pre-prints are systematically excluded.
+* **In silico information Only:** We prioritize experimental evidence. Studies relying solely on Molecular Dynamics (MD) simulations or *in silico* modeling are discarded, unless the computational data complements *in vitro* or *in vivo* experiments.
+* **Non-English pulication:** To ensure flawless comprehension, we discard publications not published in English.
+* **Other:** Anomalous edge cases that do not map to standard exclusionary categories.
+
+---
+
+### Initial curation
+
+After first assessment on the query and non-query publications, 6.81% (209) publications were deemed as "Useful", 167 corresponding to the query and 42 to the non-query bibliographic addition. 
+
+After the secondary curation, 8 (3.82%) of the initially taged as "Useful" publications were re-avaluated as "Not Useful", while 1 publicaiton was retracted during the curation process.
+
+
+#### Development of a Machine Learning method to improve curation queues
+
+
+The large body of publications to initially review presented a significant bottleneck in terms of human and time resources. In parallel, we developed a Machine Learning methodology which could help prioritize curation queues. Once 25% of the publications were assessed, we used the Title, Abstracts and references of the positive "Useful" and negative "Rejected" publications to train this algorithm. The subsequent iterations of it were fed with the increasing number of reviewed publications in a continuous loop. Additionally, the revisions were tagged with "Reason for Rejection" (as presented in the *Inclusion-Exclusion Criteria & Curation Tags* section), to improve the ML curation queues development.
+
+The curation of the AmyloGraph Antibody DB, and development of a ML curation queue algorithm, were considered as a topic for the German ELIXIR BioHackathon, 2025.
+
+## Two-step indepedent data curation
+
+To ensure maintaining curation consistency across time and different curators, we implemented various overlapping strategies. We scheduled regular meetings between the Leading Curators and the Junior Curators, a one-on-one introduction meeting with each Junior Curator, provided a Curator handbook with definitions, FAQs and curation examples, and set-up a Slack channel for curation-related discussions.
+
+
+### Curator handbook with examples
+
+Curators were provided with a reference guide featuring clear definitions FAQs, and real world curation examples. Definitions include what is considered an antibody, an amyloid, the biophysical, biomedical and biochemical basis of the most employed techniques to report changes in amyloid aggregation. FAQs include how to report non-human versions of the amyloid proteins, how to consider ambiguous entities (such as publications reporting "amyloid plaques" instead of a unique Aβ₄₂ or Aβ₄₀ species), how to annotate Immunoglobulin light chain (AL) amyloidosis when no unnequivocal sequential data is provided, etc. This trianing resource ensures maximum reproducibility and consistency across all annotators of the AmyloGraph Antibody Database.
+
+
+### First step: standardising annotation and description of the data.
+
+To ensure maximum granularity and data integrity, our curation process divides each publication across three interconnected modules: Antibody Properties, Amyloid Targets, and Interaction Profiles. To maximize data standardization, these modules are pre-populated (in the forms of Google Forms), with acceptable answers to publication doi, the amyloid protein, the antibody, antibody type, impact of the antibody on the aggregation, etc. 
+
+
+* If a publication reports the effect on multiple (>1) amyloids, the curator will fill in one "Amyloid form" for each species.
+* If a publication reports several antibodies, the curator will fill in one "Antibody form" for each species.
+
+Finally, the curator will fill one "Interaction form" for each antibody-amyloid pair. 
+
+
+### Second, independent, machine-assisted curation
+
+Secondary curation was assisted by means of two python libraries: [MarkItDown](https://pypi.org/project/markitdown/) and [LangExtract](https://pypi.org/project/langextract/) to accelerate curation and minimize data leakage.
+
+*  MarkItDown, developed by Microsoft, converts different document formats—including into clean, structured Markdown text.
+
+MarkItDown was implemented for PDF-only publications, to generate Markdown files that could be processed by LangExtract.
+
+* LangExtract, developed by Google, uses LLMs to read text-based publications, highlighting the rellevant information and develop human-friendly htmls with the rellevant text highlighted.
+
+Text data from the publications were processed by LangExtract coupled with Ollama running the [Gemma3:4b model](https://ollama.com/library/gemma3:4b).
+
+
+## Further considerations
+
+### Amyloid plaques
+
+Amyloid plaques are composed of different proteotypes of the amyloid βeta peptide, such as Aβ₄₂, Aβ₄₀, Aβ₃₈, and Pyroglutamate-Aβ (pE3-Aβ). Despite this, the overwhelingly major constituent is the [Aβ₄₂ peptide (42 amino acids)](https://doi.org/10.1074/jbc.270.13.7013). Therefore, for in vivo experiments reporting changes in amyloid plaques (plaque number, plaque density, Positron Emission Tomography uptake values...) we annotate Aβ₄₂ as the amyloid interactor.
+
+###  Considerations on experimental amyloid reporters
+
+The ISA recommends the use of Serum Free Light Chains (sFLC) as a the biomarker to follow Immunoglobulin light chain (AL) amyloidosis disease progression and therapeutic response [number]((https://doi.org/10.1200/jco.2011.37.7614)). sFLC reports the disease progression, but is an indirect reporter of the amyloid state, the amyloid deposits. Therefore, we have not included it as evidence of changes in amyloid aggregation. In a similar fashion, we have considered "indirect" other reporters such as clinical dementia rating, cellular cytotoxicity, Morris-water maze performance, brain soluble Aβ₄₀ or Aβ₄₂ levels, microglia uptake, or % truncated α-Synuclein.
+
+

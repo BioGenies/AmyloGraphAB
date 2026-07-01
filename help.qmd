@@ -4,7 +4,7 @@ title: "Help"
 
 # Tutorial
 
-AmyloGraph reports peer-reviewed interactions between amyloid proteins and antobodies.
+AmyloGraph reports peer-reviewed interactions between amyloid proteins and antibodies.
 The data is structured into three logical blocks: the interactors: amyloids and antibodies and the result of the interaction.
 
  Each interaction from each publication reports how this interaction was followed (the experimental setup), the outcome(s) of this interaction (decreased the aggregation, the speed of the amyloid formation, etc...), the details of the interaction (the antibody Complementarity-Determining Regions (CDRs), the amyloid epitope recognised) as well as quoting the part of the text in which authors report the outcome of the interaction.
