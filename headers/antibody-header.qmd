@@ -30,13 +30,13 @@ part_dat <- dat[dat[["ABID_base"]] == params[["ABIDbase"]],
 "ABID_class", "ABID_match_status", "ABID_stable_key")]
 ```
 
-Name: `r unique(part_dat[["ABID_base"]])`.
+Name: `r np(part_dat[["ABID_base"]])`.
 
-INN.or.Clinical.mAb.linked: `r unique(part_dat[["INN.or.Clinical.mAb.linked"]])`.
+INN antibody name: `r np(part_dat[["INN.or.Clinical.mAb.linked"]])`.
 
-Name.of.Antibody.in.the.publication: `r unique(part_dat[["Name.of.Antibody.in.the.publication"]])`.
+Name.of.Antibody.in.the.publication: `r np(part_dat[["Name.of.Antibody.in.the.publication"]])`.
 
-Is.there.sequential.or.structural.information.listed.: `r unique(part_dat[["Is.there.sequential.or.structural.information.listed."]])`.
+Is.there.sequential.or.structural.information.listed.: `r np(part_dat[["Is.there.sequential.or.structural.information.listed."]])`.
 
 
 ```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}

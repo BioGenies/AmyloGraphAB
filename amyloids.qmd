@@ -7,8 +7,8 @@ source("helpers.R")
 
 dat <- read.csv("data/Amyloids.csv")
 
-unique(dat[c("AGAMYID", "UniProt.ID", "AGAMYID_display_name", "Species.if.not.human",
-             "AGAMYID_basis", "AGAMYID_uniprot_name")]) |>
+unique(dat[c("AGAMYID", "UniProt.ID", "AGAMYID_display_name", "Species.if.not.human")]) |>
+  setNames(c("AGAMYID", "UniProt ID", "Name", "Species")) |>
   DT::datatable(escape = FALSE, 
                 style = "bootstrap5",
                 class = "wrap",

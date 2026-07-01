@@ -10,6 +10,8 @@ antibodies <- read.csv("data/Antibodies.csv")
 dplyr::group_by(antibodies[, c("ABID_base", "INN.or.Clinical.mAb.linked", "Name.of.Antibody.in.the.publication")], 
                 ABID_base, INN.or.Clinical.mAb.linked) |>
   dplyr::summarise(publication_names = paste0(sort(unique(Name.of.Antibody.in.the.publication)), collapse = ", "), n = length(ABID_base)) |>
+  dplyr::mutate(INN.or.Clinical.mAb.linked = factor(INN.or.Clinical.mAb.linked)) |> 
+  setNames(c("ABID", "Antibody name", "Publication name(s)", "Number of studies")) |>
   DT::datatable(escape = FALSE, 
                 style = "bootstrap5",
                 class = "wrap",

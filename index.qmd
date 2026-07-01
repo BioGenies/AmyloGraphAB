@@ -5,7 +5,7 @@ execute:
   warning: false 
 ---
 
-# About the AmyloGraph Antibody Database
+# Getting started
 
 The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.
 

@@ -9,3 +9,8 @@ render_doi <- DT::JS("function(data, type, row, meta) {
 render_pmid <- DT::JS("function(data, type, row, meta) {
                       return '<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + data + '\" target=\"_blank\">' + data + '</a>';
                     }")
+
+np <- function(x) {
+  res <- unique(x)
+  ifelse(res == "", "Not available", res)
+}

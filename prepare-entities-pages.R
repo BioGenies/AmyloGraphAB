@@ -2,16 +2,6 @@ library(dplyr)
 
 amyloids <- read.csv("data/Amyloids.csv")
 
-file.copy("headers/peptide-header.qmd", "peptides")
-
-colnames(amyloids)
-
-"Modifications.to.UniProt.sequence..If.not.UniProt..Sequential.info..Structural.if.available..separate.by.commas."
-
-unique(dat[c("AGAMYID", "UniProt.ID", "AGAMYID_display_name", "Species.if.not.human",
-             "AGAMYID_basis", "AGAMYID_uniprot_name")])
-
-
 dir.create("docs/amyloids/")
 
 for(ith_amyloid_id in unique(amyloids[["AGAMYID"]])) {
