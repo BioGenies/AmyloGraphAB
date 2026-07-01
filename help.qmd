@@ -4,21 +4,18 @@ title: "Help"
 
 # Tutorial
 
-AmyloGraph reports peer-reviewed interactions between amyloid proteins and antibodies.
+AmyloGraph reports peer-reviewed interactions between amyloid proteins and antobodies.
 The data is structured into three logical blocks: the interactors: amyloids and antibodies and the result of the interaction.
 
- Each interaction from each publication reports how this interaction was followed (the experimental setup), the outcome(s) of this interaction (decreased the aggregation, the speed of the amyloid formation, etc...), the details of the interaction (the antibody Complementarity-Determining Regions (CDRs), the amyloid epitope recognised) as well as quoting the part of the text in which authors report the outcome of the interaction.
+Each interaction from each publication reports how this interaction was followed (the experimental setup), the outcome(s) of this interaction (decreased the aggregation, the speed of the amyloid formation, etc...), the details of the interaction (the antibody Complementarity-Determining Regions (CDRs), the amyloid epitope recognised) as well as quoting the part of the text in which authors report the outcome of the interaction.
 
- The amyloids and antibodies tabs allow filtering by different amyloid or antibody entities. The AmyloGraph Antibody Database provides unique identifiers for each antibody and amyloid to overcome several limitations, such as: different amyloids corresponding to the same UniProt Accession/Gene ID, patient-derived antibody light chain amyloidosis not directly linked to a specific sequence or basic antibodies without INN, GenBank or other persistent identifiers. The interoperability of the data provided is enhanced through cross-references and direct links to gold-standard external databases in all possible cases ([UniProtKB](https://www.uniprot.org/),[PubChem](https://pubchem.ncbi.nlm.nih.gov/), [IMGT/mAb-DB](https://www.imgt.org/mAb-DB/)), ensuring seamless data integration.
+ The amyloids and antibodies tabs allow filtering by different amyloid or antibody entities. The AmyloGraph Antibody Database provides unique identifiers for each antibody and amyloid to overcome several limitations, such as: different amyloids corresponding to the same UniProt Accession/Gene ID, patient-derived antibody light chain amyloidosis not directly linked to a specific sequence or basic antibodies without INN, GenBank or other persistent identifiers. The interoperability of the data provided is enhanced through cross-references and direct links to gold-standard external databases in all possible cases (including [UniProtKB](https://www.uniprot.org/),[PubChem](https://pubchem.ncbi.nlm.nih.gov/), [IMGT/mAb-DB](https://www.imgt.org/mAb-DB/)), ensuring seamless data integration.
  
-
-## Download
-The AmyloGraph Antibody Datbase Interaction data can be downloaded in JSON or CSV file formats. Stable and latest releases can be found at [our repository](https://github.com/ValentinIglesias/AmyloGraph_Antibody_DB).
 
 ## Citation
 
-Our names. Publication title for eg.: The AmyloGraph Antibody Database: The resource for antibody inhibition of amyloid aggregation. *Under Consideration*. 
+Valentín Iglesias, Mariia Rutkowska, Julia Szkóp, Jarosław Chilimoniuk, Ronja Tittel, Martyna Podlasiek, Katarzyna Kamieniecka, Dawid Sonor Kubkowski, Damian Wilary, Krzysztof Poterłowicz, Michał Burdukiewicz. **The AmyloGraph Antibody Database: The resource for antibody inhibition of amyloid aggregation.** *Under Consideration*. 
 
 ## Acknowledgements
 
-AmyloGraph is partially supported by the SONATA-NCN grant no. 2023/51/D/NZ7/02847 to Michał Burdukiewicz. (More?)
+AmyloGraph is partially supported by the SONATA-NCN grant no. 2023/51/D/NZ7/02847 to Michał Burdukiewicz.
