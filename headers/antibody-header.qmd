@@ -1,0 +1,63 @@
+---
+title: "Antibody View"
+lib-dir: site_libs
+params:
+  ABIDbase: "default"
+format:
+  html:
+    include-in-header: header.html
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 50px
+---
+
+```{r,echo=FALSE}
+source("helpers.R")
+
+dat <- read.csv("data/Antibodies.csv")
+
+quarto::write_yaml_metadata_block(
+  title = params[["ABIDbase"]]
+)
+
+part_dat <- dat[dat[["ABID_base"]] == params[["ABIDbase"]], 
+                c("ABID", "INN.or.Clinical.mAb.linked", "Name.of.Antibody.in.the.publication", 
+"Antibody.Type..specify.if.not.listed.", "Is.there.sequential.or.structural.information.listed.", 
+"DOI", "PMID", "Link.to.any.of.the.gold.standards.on.column.M..If.so.and.retains.the.antibody.type..eg...test.were.not.made.with.scFv.but.mAb.is.full.IgG..finish.here", 
+"Basic..Continued.or.Non.clinical..If.continued..other.mAb.IDs...Non.clinical.are.commercial.ones.used.mostly.for.detection.purposes", 
+"ABID_base", "ABID_family_INN", "ABID_matched_name", "ABID_matched_name_type", 
+"ABID_class", "ABID_match_status", "ABID_stable_key")]
+```
+
+Name: `r unique(part_dat[["ABID_base"]])`.
+
+INN.or.Clinical.mAb.linked: `r unique(part_dat[["INN.or.Clinical.mAb.linked"]])`.
+
+Name.of.Antibody.in.the.publication: `r unique(part_dat[["Name.of.Antibody.in.the.publication"]])`.
+
+Is.there.sequential.or.structural.information.listed.: `r unique(part_dat[["Is.there.sequential.or.structural.information.listed."]])`.
+
+
+```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+
+(part_dat[, c("DOI", "PMID", "ABID", 
+"Link.to.any.of.the.gold.standards.on.column.M..If.so.and.retains.the.antibody.type..eg...test.were.not.made.with.scFv.but.mAb.is.full.IgG..finish.here", 
+"Basic..Continued.or.Non.clinical..If.continued..other.mAb.IDs...Non.clinical.are.commercial.ones.used.mostly.for.detection.purposes", 
+"ABID_class")]) |>
+  setNames(c("DOI", "PMID", "ABID", "Link", "Clinical", "ABID_class")) |>
+  DT::datatable(escape = FALSE, 
+              style = "bootstrap5",
+              class = "wrap",
+              filter = "top",
+              extensions = "Buttons", 
+              rownames = FALSE,
+              options = list(pageLength = 50,
+                             dom = "Bfrtip",
+                             buttons = c("copy", "csv"),
+                             columnDefs = list(
+                               list(targets = 0, render = render_doi),
+                               list(targets = 1, render = render_pmid)
+              )))
+
+```

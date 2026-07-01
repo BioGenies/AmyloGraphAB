@@ -1,0 +1,55 @@
+---
+title: "Amyloid View"
+lib-dir: site_libs
+params:
+  AGAMYID: "default"
+format:
+  html:
+    include-in-header: header.html
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 50px
+---
+
+```{r,echo=FALSE}
+source("helpers.R")
+
+dat <- read.csv("data/Amyloids.csv")
+
+quarto::write_yaml_metadata_block(
+  title = params[["AGAMYID"]]
+)
+
+part_dat <- dat[dat[["AGAMYID"]] == params[["AGAMYID"]], 
+                c("AGAMYID", "UniProt.ID", "Discriminatory.info.OR.UniProt.name", 
+                  "DOI", "PMID", "Species.if.not.human", "Discriminatory.info..for.Abeta.or.antibody.amyloidosis....", 
+                  "Modifications.to.UniProt.sequence..If.not.UniProt..Sequential.info..Structural.if.available..separate.by.commas.", 
+                  "AGAMYID_key", "AGAMYID_basis", "AGAMYID_discriminatory_info_curated", 
+                  "AGAMYID_uniprot_name", "AGAMYID_display_name", "AGAMYID_skip_export")]
+```
+
+Name: `r unique(part_dat[["AGAMYID_display_name"]])`.
+
+UniProt ID: `r unique(part_dat[["UniProt.ID"]])`.
+
+Organism: `r unique(part_dat[["Species.if.not.human"]])`.
+
+```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+
+DT::datatable(part_dat[, c("DOI", "PMID", "Modifications.to.UniProt.sequence..If.not.UniProt..Sequential.info..Structural.if.available..separate.by.commas.")],
+              escape = FALSE, 
+              style = "bootstrap5",
+              class = "wrap",
+              filter = "top",
+              extensions = "Buttons", 
+              rownames = FALSE,
+              options = list(pageLength = 50,
+                             dom = "Bfrtip",
+                             buttons = c("copy", "csv"),
+                             columnDefs = list(
+                               list(targets = 0, render = render_doi),
+                               list(targets = 1, render = render_pmid)
+              )))
+
+```

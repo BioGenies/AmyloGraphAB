@@ -1,0 +1,57 @@
+---
+title: "Interaction View"
+lib-dir: site_libs
+params:
+  AMGABID: "default"
+format:
+  html:
+    include-in-header: header.html
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 50px
+---
+
+```{r,echo=FALSE}
+source("helpers.R")
+
+dat <- read.csv("data/Interactions.csv")
+
+quarto::write_yaml_metadata_block(
+  title = params[["AMGABID"]]
+)
+
+part_dat <- dat[dat[["AMGABID"]] == params[["AMGABID"]], ]
+```
+
+## Amyloid
+
+Amyloid AmyloGraph ID (AGAMYID): `r unique(part_dat[["AGAMYID"]])`.
+
+Amyloid.UniProt.ID: `r unique(part_dat[["Amyloid.UniProt.ID"]])`.
+
+## Antibody 
+
+Antibody AmyloGraph ID (ABID): `r unique(part_dat[["ABID"]])`.
+
+Antibody names (as used in the reporting publication): `r unique(part_dat[["Antibody.Name..if.not.INN."]])`.
+
+## Interaction
+
+Impact of the antibody on amyloid formation: `r unique(part_dat[["Impact.of.the.antibody.on.amyloid.formation"]])`.
+
+Experimental model: `r unique(part_dat[["Experimental.Model"]])`.
+
+Experimental method: `r unique(part_dat[["Experimental.method"]])`.
+
+Amyloid epitope: `r unique(part_dat[["Amy.epitope"]])`.
+
+Amyloid.species.identified: `r unique(part_dat[["Amyloid.species.identified"]])`.
+
+Paratope/CDR/Negative.control: `r unique(part_dat[["Ab.Paratope.CDR...Negative.control"]])`.
+
+## Source
+
+DOI: `r unique(part_dat[["DOI"]])`.
+
+PMID: `r unique(part_dat[["PMID"]])`.

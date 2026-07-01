@@ -1,0 +1,41 @@
+---
+title: "Interactions"
+format:
+  html:
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 50px
+---
+
+```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+source("helpers.R")
+
+interactions <- read.csv("data/Interactions.csv")
+
+unique(interactions[c("AMGABID", "AGAMYID", "Amyloid.UniProt.ID", "ABID", "Antibody.Name..if.not.INN.", 
+                      "Impact.of.the.antibody.on.amyloid.formation", "Experimental.Model",
+                      "DOI")]) |>
+  dplyr::mutate("Impact.of.the.antibody.on.amyloid.formation" = factor(Impact.of.the.antibody.on.amyloid.formation)) |>
+  DT::datatable(escape = FALSE, 
+                style = "bootstrap5",
+                class = "wrap",
+                filter = "top",
+                extensions = "Buttons", 
+                rownames = FALSE,
+                options = list(pageLength = 50,
+                               dom = "Bfrtip",
+                               buttons = c("copy", "csv"),
+                               columnDefs = list(
+                                 list(targets = 0, render = DT::JS("function(data, type, row, meta) {
+                      return '<a href=\"interactions/' + data + '.html\">' + data + '</a>';
+                    }")),
+                                 list(targets = 1, render = DT::JS("function(data, type, row, meta) {
+                      return '<a href=\"amyloids/' + data + '.html\">' + data + '</a>';
+                    }")),
+                    list(targets = 2, render = render_uniprot),
+                    list(targets = 3, render = DT::JS("function(data, type, row, meta) {
+                      return '<a href=\"antibodies/' + data + '.html\" target=\"_blank\">' + data + '</a>';
+                    }")))
+                ))
+```

@@ -1,0 +1,9 @@
+.seq {
+  font-family: monospace;
+  line-height: 1.5;
+  background: #CCCCCC;
+  border: 1px solid black;
+  padding: 8px;
+  display: inline-block;
+  white-space: pre;
+}

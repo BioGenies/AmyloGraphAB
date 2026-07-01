@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+  execute-dir: project
+  render:
+    - "*.qmd"
+    - "!headers"
+
+execute:
+  global: true
+
+website:
+  open-graph: true
+  twitter-card: true
+  title: AmylographAB
+  reader-mode: true
+
+  navbar:
+    left:
+      - interactions.qmd
+      - amyloids.qmd
+      - antibodies.qmd
+
+  page-footer:
+    background: light
+    left:
+      - text: <i class="bi bi-question-circle"></i> Help
+        href: help.qmd
+    center:
+      - icon: fig/bg_logo.png
+        text: <a href="https://biogenies.info/">&copy; 2026 Website developed by BioGenies team.</a>
+    right:
+      - text: <i class="bi bi-envelope-paper-fill"></i> Contact
+        href: contact.qmd
+
+
+format:
+  html:
+    theme: minty
+    toc: true
+    css: styles.css
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 150px
+
+editor: source

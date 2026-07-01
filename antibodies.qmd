@@ -1,0 +1,34 @@
+---
+title: "Antibodies"
+format:
+  html:
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 50px
+---
+
+```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
+source("helpers.R")
+
+antibodies <- read.csv("data/Antibodies.csv")
+
+dplyr::group_by(antibodies[, c("ABID_base", "INN.or.Clinical.mAb.linked", "Name.of.Antibody.in.the.publication")], 
+                ABID_base, INN.or.Clinical.mAb.linked) |>
+  dplyr::summarise(publication_names = paste0(sort(unique(Name.of.Antibody.in.the.publication)), collapse = ", "), n = length(ABID_base)) |>
+  DT::datatable(escape = FALSE, 
+                style = "bootstrap5",
+                class = "wrap",
+                filter = "top",
+                extensions = "Buttons", 
+                rownames = FALSE,
+                options = list(pageLength = 50,
+                               dom = "Bfrtip",
+                               buttons = c("copy", "csv"),
+                               columnDefs = list(
+                                 list(targets = 0, render = DT::JS("function(data, type, row, meta) {
+                      return '<a href=\"antibodies/' + data + '.html\" target=\"_blank\">' + data + '</a>';
+                    }"))
+                    )
+                ))
+```
