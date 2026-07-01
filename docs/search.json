@@ -11,7 +11,7 @@
     "href": "help.html",
     "title": "Help",
     "section": "",
-    "text": "AmyloGraph reports peer-reviewed interactions between amyloid proteins and antibodies. The data is structured into three logical blocks: the interactors: amyloids and antibodies and the result of the interaction.\nEach interaction from each publication reports how this interaction was followed (the experimental setup), the outcome(s) of this interaction (decreased the aggregation, the speed of the amyloid formation, etc…), the details of the interaction (the antibody Complementarity-Determining Regions (CDRs), the amyloid epitope recognised) as well as quoting the part of the text in which authors report the outcome of the interaction.\nThe amyloids and antibodies tabs allow filtering by different amyloid or antibody entities. The AmyloGraph Antibody Database provides unique identifiers for each antibody and amyloid to overcome several limitations, such as: different amyloids corresponding to the same UniProt Accession/Gene ID, patient-derived antibody light chain amyloidosis not directly linked to a specific sequence or basic antibodies without INN, GenBank or other persistent identifiers. The interoperability of the data provided is enhanced through cross-references and direct links to gold-standard external databases in all possible cases (UniProtKB,PubChem, IMGT/mAb-DB), ensuring seamless data integration.\n\n\nThe AmyloGraph Antibody Datbase Interaction data can be downloaded in JSON or CSV file formats. Stable and latest releases can be found at our repository.\n\n\n\nOur names. Publication title for eg.: The AmyloGraph Antibody Database: The resource for antibody inhibition of amyloid aggregation. Under Consideration.\n\n\n\nAmyloGraph is partially supported by the SONATA-NCN grant no. 2023/51/D/NZ7/02847 to Michał Burdukiewicz. (More?)\n\n\n Contact\n\n:::"
+    "text": "AmyloGraph reports peer-reviewed interactions between amyloid proteins and antobodies. The data is structured into three logical blocks: the interactors: amyloids and antibodies and the result of the interaction.\nEach interaction from each publication reports how this interaction was followed (the experimental setup), the outcome(s) of this interaction (decreased the aggregation, the speed of the amyloid formation, etc…), the details of the interaction (the antibody Complementarity-Determining Regions (CDRs), the amyloid epitope recognised) as well as quoting the part of the text in which authors report the outcome of the interaction.\nThe amyloids and antibodies tabs allow filtering by different amyloid or antibody entities. The AmyloGraph Antibody Database provides unique identifiers for each antibody and amyloid to overcome several limitations, such as: different amyloids corresponding to the same UniProt Accession/Gene ID, patient-derived antibody light chain amyloidosis not directly linked to a specific sequence or basic antibodies without INN, GenBank or other persistent identifiers. The interoperability of the data provided is enhanced through cross-references and direct links to gold-standard external databases in all possible cases (including UniProtKB,PubChem, IMGT/mAb-DB), ensuring seamless data integration.\n\n\nValentín Iglesias, Mariia Rutkowska, Julia Szkóp, Jarosław Chilimoniuk, Ronja Tittel, Martyna Podlasiek, Katarzyna Kamieniecka, Dawid Sonor Kubkowski, Damian Wilary, Krzysztof Poterłowicz, Michał Burdukiewicz. The AmyloGraph Antibody Database: The resource for antibody inhibition of amyloid aggregation. Under Consideration.\n\n\n\nAmyloGraph is partially supported by the SONATA-NCN grant no. 2023/51/D/NZ7/02847 to Michał Burdukiewicz.\n\n\n Contact\n\n:::"
   },
   {
     "objectID": "antibodies.html",
@@ -60,14 +60,14 @@
     "href": "help.html#citation",
     "title": "Help",
     "section": "",
-    "text": "Our names. Publication title for eg.: The AmyloGraph Antibody Database: The resource for antibody inhibition of amyloid aggregation. Under Consideration."
+    "text": "Valentín Iglesias, Mariia Rutkowska, Julia Szkóp, Jarosław Chilimoniuk, Ronja Tittel, Martyna Podlasiek, Katarzyna Kamieniecka, Dawid Sonor Kubkowski, Damian Wilary, Krzysztof Poterłowicz, Michał Burdukiewicz. The AmyloGraph Antibody Database: The resource for antibody inhibition of amyloid aggregation. Under Consideration."
   },
   {
     "objectID": "help.html#acknowledgements",
     "href": "help.html#acknowledgements",
     "title": "Help",
     "section": "",
-    "text": "AmyloGraph is partially supported by the SONATA-NCN grant no. 2023/51/D/NZ7/02847 to Michał Burdukiewicz. (More?)\n\n\n Contact\n\n:::"
+    "text": "AmyloGraph is partially supported by the SONATA-NCN grant no. 2023/51/D/NZ7/02847 to Michał Burdukiewicz.\n\n\n Contact\n\n:::"
   },
   {
     "objectID": "index.html#amyloid-proteins",
