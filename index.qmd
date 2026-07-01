@@ -235,7 +235,7 @@ Text data from the publications were processed by LangExtract coupled with Ollam
 
 ### Amyloid plaques
 
-Amyloid plaques are composed of different proteotypes of the amyloid βeta peptide, such as Aβ₄₂, Aβ₄₀, Aβ₃₈, and Pyroglutamate-Aβ (pE3-Aβ). Despite this, the overwhelingly major constituent is the Aβ₄₂ peptide (42 amino acids)[https://doi.org/10.1074/jbc.270.13.7013]. Therefore, for in vivo experiments reporting changes in amyloid plaques (plaque number, plaque density, Positron Emission Tomography uptake values...) we annotate Aβ₄₂ as the amyloid interactor.
+Amyloid plaques are composed of different proteotypes of the amyloid βeta peptide, such as Aβ₄₂, Aβ₄₀, Aβ₃₈, and Pyroglutamate-Aβ (pE3-Aβ). Despite this, the overwhelingly major constituent is the [Aβ₄₂ peptide (42 amino acids)](https://doi.org/10.1074/jbc.270.13.7013). Therefore, for in vivo experiments reporting changes in amyloid plaques (plaque number, plaque density, Positron Emission Tomography uptake values...) we annotate Aβ₄₂ as the amyloid interactor.
 
 ###  Considerations on experimental amyloid reporters
 
