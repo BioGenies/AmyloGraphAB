@@ -1,5 +1,12 @@
 ---
 title: "Data curation"
+format:
+  html:
+    grid:
+      sidebar-width: 50px
+      body-width: 1700px
+      margin-width: 50px
+---
 ---
 
 The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.
