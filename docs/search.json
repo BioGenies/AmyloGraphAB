@@ -39,7 +39,7 @@
     "href": "index.html",
     "title": "AmyloGraphAB",
     "section": "",
-    "text": "About the AmyloGraph Antibody Database\nThe AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.\nDespite the vast economic and time resources devoted over the last three decades in actively investigating treatments for neurodegenerative amyloidosis, their success remains scarce. While none of the 14 different compounds that targetting amyloid-β that made it through phase III clinical trials made it through, two anti-amyloid antibodies have received regulatory approval in Europe (lecanemab and donanemab), and a third one in the United States (aducanumab), for treating Alzheimer’s disease (AD). Lecanemab and donanemab have shown to slow cognitive decline by around 30%. Long-term clinical evidence support the therapeutic concept of antibody-removal of amyloid deposits, as demonstrated in post-mortem evaluations of Alzheimer’s disease patients 15 years post-immunization”. Additionally, mAbs are in clinical trials for various amyloidoses with no current disease-modifying therapies, including Parkinson’s Disease (PD), Transthyretin amyloidosis or Amyloid light chain (AL) amyloidosis. Instead, multiple mAbs have shown insufficient results or are only useful for certain disease stages, genotypes or phenotypes. Understanding the molecular mechanisms of why certain antibody therapeutics succeed and others do not could allow for increasing the success rate and decreasing economic burden for these incurable conditions.\n\n\n Contact\n\n:::"
+    "text": "The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.\nInteractions: list of all amyloid-antibody interactions.\nAmyloids: list of all amyloids involved in these interactions (named utilized common amyloid nomenclature).\nAntibodies: list of all antibodies involved in these interactions.\n\n\nAll source data files can be downloaded from their respective tables. The complete database in the .json format is available here. All curated information is completely reuseable under the Creative Commons Attribution 4.0 International licence.\n\n\n\nThe AmyloGraph Antibody Database contains over 450 interactions between 18 unique amyloids and 436 antibodies (including amyloid-reducing evidence for most of the clinically assessed monoclonal antibodies), derived from 251 studies. Read more about the data curation here.\n\n\n Contact\n\n:::"
   },
   {
     "objectID": "index.html#what-is-amylographab",
@@ -109,7 +109,7 @@
     "href": "curation.html",
     "title": "Data curation",
     "section": "",
-    "text": "The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.\nWe establish controlled-vocabulary to describe the interaction, considering:"
+    "text": "Despite the vast economic and time resources devoted over the last three decades in actively investigating treatments for neurodegenerative amyloidosis, their success remains scarce. While none of the 14 different compounds that targetting amyloid-β that made it through phase III clinical trials made it through, two anti-amyloid antibodies have received regulatory approval in Europe (lecanemab and donanemab), and a third one in the United States (aducanumab), for treating Alzheimer’s disease (AD). Lecanemab and donanemab have shown to slow cognitive decline by around 30%. Long-term clinical evidence support the therapeutic concept of antibody-removal of amyloid deposits, as demonstrated in post-mortem evaluations of Alzheimer’s disease patients 15 years post-immunization”. Additionally, mAbs are in clinical trials for various amyloidoses with no current disease-modifying therapies, including Parkinson’s Disease (PD), Transthyretin amyloidosis or Amyloid light chain (AL) amyloidosis. Instead, multiple mAbs have shown insufficient results or are only useful for certain disease stages, genotypes or phenotypes. Understanding the molecular mechanisms of why certain antibody therapeutics succeed and others do not could allow for increasing the success rate and decreasing economic burden for these incurable conditions.\nThe AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.\nWe establish controlled-vocabulary to describe the interaction, considering:"
   },
   {
     "objectID": "curation.html#amyloid-proteins",
@@ -145,5 +145,19 @@
     "title": "Data curation",
     "section": "Further considerations",
     "text": "Further considerations\n\nAmyloid plaques\nAmyloid plaques are composed of different proteotypes of the amyloid βeta peptide, such as Aβ₄₂, Aβ₄₀, Aβ₃₈, and Pyroglutamate-Aβ (pE3-Aβ). Despite this, the overwhelingly major constituent is the Aβ₄₂ peptide (42 amino acids). Therefore, for in vivo experiments reporting changes in amyloid plaques (plaque number, plaque density, Positron Emission Tomography uptake values…) we annotate Aβ₄₂ as the amyloid interactor.\n\n\nConsiderations on experimental amyloid reporters\nThe ISA recommends the use of Serum Free Light Chains (sFLC) as a the biomarker to follow Immunoglobulin light chain (AL) amyloidosis disease progression and therapeutic response number. sFLC reports the disease progression, but is an indirect reporter of the amyloid state, the amyloid deposits. Therefore, we have not included it as evidence of changes in amyloid aggregation. In a similar fashion, we have considered “indirect” other reporters such as clinical dementia rating, cellular cytotoxicity, Morris-water maze performance, brain soluble Aβ₄₀ or Aβ₄₂ levels, microglia uptake, or % truncated α-Synuclein.\n\n\n Contact\n\n:::"
+  },
+  {
+    "objectID": "index.html#download",
+    "href": "index.html#download",
+    "title": "AmyloGraphAB",
+    "section": "",
+    "text": "All source data files can be downloaded from their respective tables. The complete database in the .json format is available here. All curated information is completely reuseable under the Creative Commons Attribution 4.0 International licence."
+  },
+  {
+    "objectID": "index.html#data-source",
+    "href": "index.html#data-source",
+    "title": "AmyloGraphAB",
+    "section": "",
+    "text": "The AmyloGraph Antibody Database contains over 450 interactions between 18 unique amyloids and 436 antibodies (including amyloid-reducing evidence for most of the clinically assessed monoclonal antibodies), derived from 251 studies. Read more about the data curation here.\n\n\n Contact\n\n:::"
   }
 ]

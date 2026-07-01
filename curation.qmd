@@ -1,13 +1,9 @@
 ---
 title: "Data curation"
-format:
-  html:
-    grid:
-      sidebar-width: 50px
-      body-width: 1700px
-      margin-width: 50px
 ---
----
+
+Despite the vast economic and time resources devoted over the last three decades in actively investigating treatments for neurodegenerative amyloidosis, their success remains scarce. While none of the 14 different compounds that targetting amyloid-β that made it through phase III clinical trials made it through, two anti-amyloid antibodies have received regulatory approval in Europe (lecanemab and donanemab), and a third one in the United States (aducanumab), for treating Alzheimer’s disease (AD). [Lecanemab](https://doi.org/10.1056/nejmoa2212948) and [donanemab](https://doi.org/10.1001/jama.2023.13239) have shown to slow cognitive decline by around 30%. Long-term clinical evidence support the therapeutic concept of antibody-removal of amyloid deposits, as [demonstrated in post-mortem evaluations of Alzheimer's disease patients 15 years post-immunization"](https://doi.org/10.1093/brain/awz142). Additionally, mAbs are in clinical trials for various amyloidoses with no current disease-modifying therapies, including [Parkinson’s Disease (PD)](https://doi.org/10.1056/nejmoa2202867), [Transthyretin amyloidosis](https://doi.org/10.1161/circulationaha.125.077304) or [Amyloid light chain (AL) amyloidosis](https://doi.org/10.1056/nejmoa2028631). Instead, multiple mAbs have shown insufficient results or are only useful for certain disease stages, genotypes or phenotypes. Understanding the molecular mechanisms of why certain antibody therapeutics succeed and others do not could allow for increasing the success rate and decreasing economic burden for these incurable conditions.
+
 
 The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.
 

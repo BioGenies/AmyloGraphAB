@@ -1,11 +1,5 @@
 ---
 title: "Interactions"
-format:
-  html:
-    grid:
-      sidebar-width: 50px
-      body-width: 1700px
-      margin-width: 50px
 ---
 
 ```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}

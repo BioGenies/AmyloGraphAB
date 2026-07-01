@@ -106,6 +106,8 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./antibodies.html"> 
 <span class="menu-text">Antibodies</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./curation.html"> 
 <span class="menu-text">Data curation</span></a>
@@ -131,7 +133,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about-the-amylograph-antibody-database" id="toc-about-the-amylograph-antibody-database" class="nav-link active" data-scroll-target="#about-the-amylograph-antibody-database">About the AmyloGraph Antibody Database</a></li>
+  <li><a href="#about-the-amylograph-antibody-database" id="toc-about-the-amylograph-antibody-database" class="nav-link active" data-scroll-target="#about-the-amylograph-antibody-database">About the AmyloGraph Antibody Database</a>
+  <ul class="collapse">
+  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data source</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -160,13 +166,23 @@ ul.task-list li input[type="checkbox"] {
 <section id="about-the-amylograph-antibody-database" class="level1">
 <h1>About the AmyloGraph Antibody Database</h1>
 <p>The AmyloGraph Antibody Database collects peer-reviewed experimental information on the impact of amyloid-targeting antibodies have on the amyloid aggregation.</p>
-<p>Despite the vast economic and time resources devoted over the last three decades in actively investigating treatments for neurodegenerative amyloidosis, their success remains scarce. While none of the 14 different compounds that targetting amyloid-β that made it through phase III clinical trials made it through, two anti-amyloid antibodies have received regulatory approval in Europe (lecanemab and donanemab), and a third one in the United States (aducanumab), for treating Alzheimer’s disease (AD). <a href="https://doi.org/10.1056/nejmoa2212948">Lecanemab</a> and <a href="https://doi.org/10.1001/jama.2023.13239">donanemab</a> have shown to slow cognitive decline by around 30%. Long-term clinical evidence support the therapeutic concept of antibody-removal of amyloid deposits, as <a href="https://doi.org/10.1093/brain/awz142">demonstrated in post-mortem evaluations of Alzheimer’s disease patients 15 years post-immunization”</a>. Additionally, mAbs are in clinical trials for various amyloidoses with no current disease-modifying therapies, including <a href="https://doi.org/10.1056/nejmoa2202867">Parkinson’s Disease (PD)</a>, <a href="https://doi.org/10.1161/circulationaha.125.077304">Transthyretin amyloidosis</a> or <a href="https://doi.org/10.1056/nejmoa2028631">Amyloid light chain (AL) amyloidosis</a>. Instead, multiple mAbs have shown insufficient results or are only useful for certain disease stages, genotypes or phenotypes. Understanding the molecular mechanisms of why certain antibody therapeutics succeed and others do not could allow for increasing the success rate and decreasing economic burden for these incurable conditions.</p>
+<p><a href="./interactions.html">Interactions</a>: list of all amyloid-antibody interactions.</p>
+<p><a href="./amyloids.html">Amyloids</a>: list of all amyloids involved in these interactions (named utilized common amyloid nomenclature).</p>
+<p><a href="./antibodies.html">Antibodies</a>: list of all antibodies involved in these interactions.</p>
+<section id="download" class="level2">
+<h2 class="anchored" data-anchor-id="download">Download</h2>
+<p>All source data files can be downloaded from their respective tables. The complete database in the .json format is available <a href="https://github.com/BioGenies/AmyloGraphAB/blob/main/data/Interactions.json">here</a>. All curated information is completely reuseable under the Creative Commons Attribution 4.0 International licence.</p>
+</section>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">Data source</h2>
+<p>The AmyloGraph Antibody Database contains over 450 interactions between 18 unique amyloids and 436 antibodies (including amyloid-reducing evidence for most of the clinically assessed monoclonal antibodies), derived from 251 studies. Read more about the data curation <a href="./curation.html">here</a>.</p>
 
 <div class="hidden" data-render-id="footer-right-/contact.html">
 <p><i class="bi bi-envelope-paper-fill"></i> Contact</p>
 </div>
 <p>:::</p>
 
+</section>
 </section>
 
 </main> <!-- /main -->
