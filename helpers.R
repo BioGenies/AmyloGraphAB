@@ -1,3 +1,8 @@
+render_link <- function(where)
+  DT::JS(paste0("function(data, type, row, meta) {
+                      return '<a href=\"", where, "/' + data + '.html\">' + data + '</a>';
+                    }"))
+
 render_uniprot <- DT::JS("function(data, type, row, meta) {
                       return '<a href=\"https://www.uniprot.org/uniprotkb/' + data + '/entry\" target=\"_blank\">' + data + '</a>';
                     }")

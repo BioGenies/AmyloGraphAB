@@ -19,9 +19,7 @@ unique(dat[c("AGAMYID", "UniProt.ID", "AGAMYID_display_name", "Species.if.not.hu
                                dom = "Bfrtip",
                                buttons = c("copy", "csv"),
                                columnDefs = list(
-                                 list(targets = 0, render = DT::JS("function(data, type, row, meta) {
-                      return '<a href=\"amyloids/' + data + '.html\" target=\"_blank\">' + data + '</a>';
-                    }")),
+                                 list(targets = 0, render = render_link("amyloids")),
                     list(targets = 1, render = render_uniprot))
                 ))
 

@@ -17,7 +17,7 @@ The AmyloGraph Antibody Database collects peer-reviewed experimental information
 
 ## Download
 
-All source data files can be downloaded from their respective tables. The complete database in the .json format is available [here](https://github.com/BioGenies/AmyloGraphAB/blob/main/data/Interactions.json). All curated information is completely reuseable under the Creative Commons Attribution 4.0 International licence.
+All source data files can be downloaded from their respective tables. The complete database in the .json format is available [here](https://raw.githubusercontent.com/BioGenies/AmyloGraphAB/refs/heads/main/data/Interactions.json). All curated information is completely reuseable under the Creative Commons Attribution 4.0 International licence.
 
 ## Data source
 
