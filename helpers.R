@@ -14,3 +14,21 @@ np <- function(x) {
   res <- unique(x)
   ifelse(res == "", "Not available", res)
 }
+
+generate_interaction_assesments <- function(iaf) {
+  interaction_sums <- rowSums(data.frame(no = grepl(x = iaf, pattern = "No effect") * 1, 
+                                         complete = grepl(x = iaf, pattern = "complete") * 2,
+                                         partial = grepl(x = iaf, pattern = "partial") * 4,
+                                         faster = grepl(x = iaf, pattern = "Faster") * 8))
+  
+  # iaf[which(interaction_sums == 12)]
+  # cut(interaction_sums, c(0, 1, 2, 3, 4, 5, 6, 8, 12, 13), right = TRUE)
+  cut(interaction_sums, c(0, 1, 2, 3, 4, 5, 6, 8, 12, 13), right = TRUE,
+      labels = c("No effect", "Complete inhibition", 
+                 "Rather complete inhibition", "Partial inhibition", 
+                 "Rather partial inhibition", "Complete or partial inhibition",
+                 "Rather partial inhibition", "Faster aggregation", 
+                 "Contradictory results"))
+}
+
+

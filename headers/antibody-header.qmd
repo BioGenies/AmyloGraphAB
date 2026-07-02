@@ -34,18 +34,14 @@ Name: `r np(part_dat[["ABID_base"]])`.
 
 INN antibody name: `r np(part_dat[["INN.or.Clinical.mAb.linked"]])`.
 
-Name.of.Antibody.in.the.publication: `r np(part_dat[["Name.of.Antibody.in.the.publication"]])`.
-
-Is.there.sequential.or.structural.information.listed.: `r np(part_dat[["Is.there.sequential.or.structural.information.listed."]])`.
-
-
 ```{r, echo=FALSE, message=FALSE, error=FALSE, warning=FALSE}
 
 (part_dat[, c("DOI", "PMID", "ABID", 
 "Link.to.any.of.the.gold.standards.on.column.M..If.so.and.retains.the.antibody.type..eg...test.were.not.made.with.scFv.but.mAb.is.full.IgG..finish.here", 
 "Basic..Continued.or.Non.clinical..If.continued..other.mAb.IDs...Non.clinical.are.commercial.ones.used.mostly.for.detection.purposes", 
-"ABID_class")]) |>
-  setNames(c("DOI", "PMID", "ABID", "Link", "Clinical", "ABID_class")) |>
+"ABID_class", "Name.of.Antibody.in.the.publication", "Is.there.sequential.or.structural.information.listed.")]) |>
+  setNames(c("DOI", "PMID", "ABID", "Link", "Clinical", "ABID_class", 
+             "Name in publication", "Sequential/structural information")) |>
   DT::datatable(escape = FALSE, 
               style = "bootstrap5",
               class = "wrap",

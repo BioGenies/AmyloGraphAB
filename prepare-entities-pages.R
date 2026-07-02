@@ -5,7 +5,7 @@ amyloids <- read.csv("data/Amyloids.csv")
 dir.create("docs/amyloids/")
 
 for(ith_amyloid_id in unique(amyloids[["AGAMYID"]])) {
-
+  
   param_list <- list(AGAMYID = ith_amyloid_id)
   
   output_file <- paste0(ith_amyloid_id, ".html")
@@ -28,7 +28,7 @@ antibodies <- read.csv("data/Antibodies.csv")
 
 dir.create("docs/antibodies/")
 
-for(ith_antibody_id in unique(antibodies[["ABID_base"]])) {
+for(ith_antibody_id in unique(antibodies[["ABID_base"]])[1L:10]) {
   
   param_list <- list(ABIDbase = ith_antibody_id)
   
@@ -70,4 +70,8 @@ for(ith_interaction_id in unique(interactions[["AMGABID"]])) {
   
   file.rename(paste0("headers/", output_file), paste0("docs/interactions/", output_file))
 }
+
+
+
+
 

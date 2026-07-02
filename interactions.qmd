@@ -10,7 +10,13 @@ interactions <- read.csv("data/Interactions.csv")
 unique(interactions[c("AMGABID", "AGAMYID", "Amyloid.UniProt.ID", "ABID", "Antibody.Name..if.not.INN.", 
                       "Impact.of.the.antibody.on.amyloid.formation", "Experimental.Model",
                       "DOI")]) |>
-  dplyr::mutate("Impact.of.the.antibody.on.amyloid.formation" = factor(Impact.of.the.antibody.on.amyloid.formation)) |>
+  dplyr::mutate(Impact.of.the.antibody.on.amyloid.formation = 
+                  factor(generate_interaction_assesments(Impact.of.the.antibody.on.amyloid.formation)),
+                Experimental.Model = factor(Experimental.Model),
+                ) |>
+  setNames(c("AMGABID", "AGAMYID", "UniProt ID", "ABID", "Antibody name", 
+                      "Impact on amyloid formation", "Experimental model",
+                      "DOI")) |>
   DT::datatable(escape = FALSE, 
                 style = "bootstrap5",
                 class = "wrap",
@@ -28,8 +34,10 @@ unique(interactions[c("AMGABID", "AGAMYID", "Amyloid.UniProt.ID", "ABID", "Antib
                       return '<a href=\"amyloids/' + data + '.html\">' + data + '</a>';
                     }")),
                     list(targets = 2, render = render_uniprot),
+                    list(targets = 7, render = render_doi),
                     list(targets = 3, render = DT::JS("function(data, type, row, meta) {
                       return '<a href=\"antibodies/' + data + '.html\" target=\"_blank\">' + data + '</a>';
-                    }")))
+                    }"))
+                    )
                 ))
 ```
