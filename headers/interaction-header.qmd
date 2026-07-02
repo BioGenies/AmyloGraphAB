@@ -26,13 +26,13 @@ part_dat <- dat[dat[["AMGABID"]] == params[["AMGABID"]], ]
 
 ## Amyloid
 
-Amyloid AmyloGraph ID (AGAMYID): `r np(part_dat[["AGAMYID"]])`.
+Amyloid AmyloGraph ID (AGAMYID): `r markdown_link(part_dat[["AGAMYID"]], "../amyloids/", ".html")`.
 
-Amyloid.UniProt.ID: `r np(part_dat[["Amyloid.UniProt.ID"]])`.
+Amyloid UniProt ID: `r markdown_uniprot(part_dat[["Amyloid.UniProt.ID"]])`.
 
 ## Antibody 
 
-Antibody AmyloGraph ID (ABID): `r np(part_dat[["ABID"]])`.
+Antibody AmyloGraph ID (ABID): `r markdown_link(part_dat[["ABID"]], "../antibodies/", ".html")`.
 
 Antibody names (as used in the reporting publication): `r np(part_dat[["Antibody.Name..if.not.INN."]])`.
 
@@ -58,6 +58,6 @@ cat(paste0("  - ", unlist(strsplit(part_dat[["Impact.of.the.antibody.on.amyloid.
 
 ## Source
 
-DOI: `r paste0("[", part_dat[["DOI"]], "](https://www.doi.org/", part_dat[["DOI"]], ")")`.
+DOI: `r markdown_doi(part_dat[["DOI"]])`.
 
-PMID: `r paste0("[", part_dat[["PMID"]], "](https://pubmed.ncbi.nlm.nih.gov/", part_dat[["PMID"]], ")")`.
+PMID: `r markdown_pmid(part_dat[["PMID"]])`.

@@ -7,9 +7,24 @@ render_uniprot <- DT::JS("function(data, type, row, meta) {
                       return '<a href=\"https://www.uniprot.org/uniprotkb/' + data + '/entry\" target=\"_blank\">' + data + '</a>';
                     }")
 
+
 render_doi <- DT::JS("function(data, type, row, meta) {
                       return '<a href=\"https://www.doi.org/' + data + '\" target=\"_blank\">' + data + '</a>';
                     }")
+
+
+markdown_link <- function(x, link, ext = "")
+  paste0("[", x, "](", link, x, ext, ")")
+
+markdown_doi <- function(x)
+  markdown_link(x, "https://www.doi.org/")
+
+markdown_pmid <- function(x)
+  markdown_link(x, "https://pubmed.ncbi.nlm.nih.gov/")
+
+markdown_uniprot <- function(x)
+  markdown_link(x, "https://www.uniprot.org/uniprotkb/")
+
 
 render_pmid <- DT::JS("function(data, type, row, meta) {
                       return '<a href=\"https://pubmed.ncbi.nlm.nih.gov/' + data + '\" target=\"_blank\">' + data + '</a>';

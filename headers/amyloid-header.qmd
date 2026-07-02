@@ -31,7 +31,7 @@ part_dat <- dat[dat[["AGAMYID"]] == params[["AGAMYID"]],
 
 Name: `r np(part_dat[["AGAMYID_display_name"]])`.
 
-UniProt ID: `r np(part_dat[["UniProt.ID"]])`.
+UniProt ID: `r markdown_uniprot(unique(part_dat[["UniProt.ID"]]))`.
 
 Organism: `r np(part_dat[["Species.if.not.human"]])`.
 
