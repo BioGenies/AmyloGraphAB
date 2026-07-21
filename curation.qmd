@@ -135,7 +135,7 @@ Tha AmyloGraph Antibody Database compiles data for most monoclonal antibodies ev
 | **Gosuranemab** | [IMGT Entry](https://www.imgt.org/mAb-DB/mAbcard?AbId=851) | [PubChem](https://pubchem.ncbi.nlm.nih.gov/substance/374363955) | [SAbDab](https://opig.stats.ox.ac.uk/webapps/sabdab-sabpred/therasabdab/therasummary/?INN=gosuranemab&format=Whole+mAb) | *N/A* | BIIB092 | IPN002 |
 
 
-# The AmyloGraph Antidoby Database Curation Pipeline
+# The AmyloGraph Antiboby Database Curation Pipeline
 
 
 
