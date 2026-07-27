@@ -40,6 +40,7 @@ INN antibody name: `r np(part_dat[["INN.or.Clinical.mAb.linked"]])`.
 "Link.to.any.of.the.gold.standards.on.column.M..If.so.and.retains.the.antibody.type..eg...test.were.not.made.with.scFv.but.mAb.is.full.IgG..finish.here", 
 "Basic..Continued.or.Non.clinical..If.continued..other.mAb.IDs...Non.clinical.are.commercial.ones.used.mostly.for.detection.purposes", 
 "ABID_class", "Name.of.Antibody.in.the.publication", "Is.there.sequential.or.structural.information.listed.")]) |>
+  # dplyr::mutate(Is.there.sequential.or.structural.information.listed. = factor(ifelse(Is.there.sequential.or.structural.information.listed. == "", "Present", "Absent"))) |>
   setNames(c("DOI", "PMID", "ABID", "Link", "Clinical", "ABID_class", 
              "Name in publication", "Sequential/structural information")) |>
   DT::datatable(escape = FALSE, 

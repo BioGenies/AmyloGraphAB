@@ -159,5 +159,12 @@
     "title": "AmyloGraphAB",
     "section": "",
     "text": "The AmyloGraph Antibody Database contains over 450 interactions between 18 unique amyloids and 436 antibodies (including amyloid-reducing evidence for most of the clinically assessed monoclonal antibodies), derived from 251 studies. Read more about the data curation here.\n\n\n Contact\n\n:::"
+  },
+  {
+    "objectID": "seqsearch.html",
+    "href": "seqsearch.html",
+    "title": "Epitope search",
+    "section": "",
+    "text": "Enter an amino acid motif in the field below to find the epitope of interest. Use * as a wildcard representing any single amino acid.\n\n Search\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Contact\n\n:::"
   }
 ]

@@ -1,5 +1,3 @@
-library(dplyr)
-
 amyloids <- read.csv("data/Amyloids.csv")
 
 dir.create("docs/amyloids/")

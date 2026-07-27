@@ -7,3 +7,10 @@
   display: inline-block;
   white-space: pre;
 }
+
+#resultsTable td.sequence-cell {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 500px;
+}

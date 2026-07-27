@@ -20,6 +20,10 @@ website:
       - interactions.qmd
       - amyloids.qmd
       - antibodies.qmd
+      - text: "Search"
+        menu: 
+          - text: "Epitope search"
+            href: seqsearch.qmd
     right:
       - curation.qmd
 

@@ -1,0 +1,239 @@
+---
+title: "Epitope search"
+format: html
+---
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="site_libs/datatables-binding-0.34.0/datatables.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="site_libs/dt-core-bootstrap5-1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+<script src="site_libs/dt-core-bootstrap5-1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="site_libs/dt-core-bootstrap5-1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<link href="site_libs/dt-ext-buttons-bootstrap5-1.13.6/css/buttons.bootstrap5.min.css" rel="stylesheet">
+<script src="site_libs/dt-ext-buttons-bootstrap5-1.13.6/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-bootstrap5-1.13.6/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-bootstrap5-1.13.6/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-bootstrap5-1.13.6/js/buttons.print.min.js"></script>
+<script src="site_libs/dt-ext-buttons-bootstrap5-1.13.6/js/buttons.bootstrap5.min.js"></script>
+<link href="site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+
+
+<link rel="stylesheet" href="styles.css">
+
+Enter an amino acid motif in the field below to find the epitope of interest. Use * as a wildcard representing any single amino acid. 
+
+<div class="search-box">
+  <input id="searchInput" type="text" placeholder="Enter your motif here.">
+  <button id="searchButton">Search</button>
+</div>
+
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" style="width:100%;height:auto;"></div>
+<div id="results"></div>
+</div>
+</div>
+
+
+<script>
+let data = [];
+let resultsDataTable = null;
+
+const CSV_FILE = "amyloids-additional-data.csv";
+const STRING_COLUMN = "Sequence";
+const NAME_COLUMN = "AGAMYID";
+
+Papa.parse(CSV_FILE, {
+  download: true,
+  header: true,
+  skipEmptyLines: true,
+
+  complete: function(results) {
+    data = results.data;
+
+    const status = document.getElementById("status");
+
+    if (status) {
+      status.textContent = `Loaded ${data.length} rows.`;
+    }
+  }
+});
+
+function validateQuery(query) {
+  if (!query) {
+    throw new Error("Please enter a search pattern.");
+  }
+
+  if (!/^[A-Za-z*]+$/.test(query)) {
+    throw new Error(
+      "The search pattern may contain only letters and the * symbol (a wildcard)."
+    );
+  }
+}
+
+function wildcardToRegex(pattern) {
+  return new RegExp(pattern.replace(/\*/g, "."), "gi");
+}
+
+function findMatches(query) {
+  const regex = wildcardToRegex(query);
+
+  return data
+    .map(row => {
+      const sequence = String(row[STRING_COLUMN] || "");
+      const name = String(row[NAME_COLUMN] || "");
+
+      if (sequence.search(regex) === -1) {
+        return null;
+      }
+
+      return {
+        sequence: sequence,
+        name: name
+      };
+    })
+    .filter(Boolean);
+}
+
+function highlightMatches(sequence, query) {
+  const regex = wildcardToRegex(query);
+
+  return sequence.replace(
+    regex,
+    match => `<strong class="sequence-match">${match}</strong>`
+  );
+}
+
+function destroyResultsTable() {
+  if (resultsDataTable) {
+    resultsDataTable.destroy();
+    resultsDataTable = null;
+  }
+}
+
+function showError(message) {
+  const container = document.getElementById("results");
+
+  if (!container) {
+    return;
+  }
+
+  destroyResultsTable();
+
+  container.innerHTML = `
+    <p class="search-error">${message}</p>
+  `;
+}
+
+function renderResults(matches, query) {
+  const container = document.getElementById("results");
+
+  destroyResultsTable();
+
+  if (matches.length === 0) {
+    container.innerHTML = "<p>No matches found.</p>";
+    return;
+  }
+
+  const rows = matches
+    .map(match => `
+      <tr>
+        <td>${match.name}</td>
+        <td class="sequence-cell">
+          ${highlightMatches(match.sequence, query)}
+        </td>
+      </tr>
+    `)
+    .join("");
+
+  container.innerHTML = `
+    <table
+      id="resultsTable"
+      class="table table-striped table-hover"
+      style="width: 100%;"
+    >
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Sequence</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows}
+      </tbody>
+    </table>
+  `;
+
+  resultsDataTable = $("#resultsTable").DataTable({
+    pageLength: 10,
+    searching: true,
+    ordering: true,
+    lengthChange: false,
+    autoWidth: false,
+
+    columnDefs: [
+      {
+        targets: 0,
+        render: function(data, type) {
+          if (type !== "display") {
+            return data;
+          }
+
+          return `<a href="amyloids/${data}.html">${data}</a>`;
+        }
+      },
+      {
+        targets: 1,
+        width: "80%"
+      }
+    ]
+  });
+}
+
+function runSearch() {
+  const searchInput = document.getElementById("searchInput");
+
+  if (!searchInput) {
+    console.error('Element with id="searchInput" was not found.');
+    return;
+  }
+
+  const query = searchInput.value.trim();
+
+  try {
+    validateQuery(query);
+
+    const matches = findMatches(query);
+
+    renderResults(matches, query);
+  } catch (error) {
+    showError(error.message);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const searchButton = document.getElementById("searchButton");
+  const searchInput = document.getElementById("searchInput");
+
+  if (searchButton) {
+    searchButton.addEventListener("click", runSearch);
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        runSearch();
+      }
+    });
+  }
+});
+</script>
